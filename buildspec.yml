@@ -16,6 +16,7 @@ phases:
       - echo post build
 artifacts:
   files:
+    - taskdef.json
     - appspec.yml
     - scripts/**/*
     - webpage/**/*
