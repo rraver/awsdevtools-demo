@@ -1,0 +1,21 @@
+{ 
+    "executionRoleArn":
+    "arn:aws:iam::161413117787:role/ecsTaskExecutionRole",
+    "containerDefinitions": [{
+        "name": "sample-website",
+        "image": "octankmedia-virtualconcert:latest",
+        "essential": true,
+        "portMappings": [{ 
+            "hostPort": 80,
+            "protocol": "tcp",
+            "containerPort": 80
+        }]
+    }],
+    "requiresCompatibilities": [
+        "FARGATE"
+    ],
+    "networkMode": "awsvpc",
+    "cpu": "256",
+    "memory": "512",
+    "family": "sample-website"
+}
